@@ -3,15 +3,15 @@ import {
     FETCH_ETHACCOUNT_FAILURE,
     FETCH_ETHACCOUNT_SUCCESS
 } from "./actionTypes";
-import { EthaccountState, EthaccountActions } from "./types.ts";
+import { EthaccountState, EthaccountActions } from "./types";
 
 const initialState: EthaccountState = {
     error: null,
     pending: false,
-    ethaccount: null
+    ethaccount: null,
 };
 
-export default (state = initialState, action: EthaccountActions) => {
+export default (state = initialState, action: EthaccountActions| any) => {
     switch (action.type) {
         case FETCH_ETHACCOUNT_REQUEST:
             return {

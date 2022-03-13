@@ -10,9 +10,9 @@ export function OnboardingButton() {
     const [buttonText, setButtonText] = React.useState(ONBOARD_TEXT);
     const [isDisabled, setDisabled] = React.useState(false);
     const [accounts, setAccounts] = React.useState([]);
-    const onboarding = React.useRef<MetaMaskOnboarding>();
+    const onboarding:any = React.useRef<MetaMaskOnboarding>();
 
-    const handleNewAccounts = (accounts: string[]) => {
+    const handleNewAccounts = (accounts: string[]| any) => {
         setAccounts(accounts);
     };
 
@@ -35,9 +35,9 @@ export function OnboardingButton() {
         }
     }, [accounts]);
 
-    React.useEffect(async () => {
+    React.useEffect( () => {
         if (MetaMaskOnboarding.isMetaMaskInstalled()) {
-            const accounts = await window.ethereum.request({
+            const accounts =  window.ethereum.request({
                 method: "eth_requestAccounts"
             });
             setAccounts(accounts);

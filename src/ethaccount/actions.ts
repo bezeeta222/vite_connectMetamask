@@ -15,14 +15,14 @@ export const fetchEthaccountRequest = (): FetchEthaccountRequest => ({
 });
 
 export const fetchEthaccountSuccess = (
-    payload: FetchEthaccountSuccessPayload
+    payload: FetchEthaccountSuccessPayload |any
 ): FetchEthaccountSuccess => ({
-    type: FETCH_ETHACCOUNT_SUCCESS,
-    payload
+    type: FETCH_ETHACCOUNT_SUCCESS ,
+    payload 
 });
 
 export const fetchEthaccountFailure = (
-    payload: FetchEthaccountFailurePayload
+    payload: FetchEthaccountFailurePayload |any
 ) => ({
     type: FETCH_ETHACCOUNT_FAILURE,
     payload

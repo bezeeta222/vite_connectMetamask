@@ -7,7 +7,7 @@ import {
 export interface EthaccountState {
     error: string | null;
     pending: boolean;
-    ethaccount: string;
+    ethaccount: any;
 }
 
 export interface Ethaccount {
@@ -24,7 +24,7 @@ export interface FetchEthaccountFailurePayload {
 }
 
 export interface FetchEthaccountRequest {
-    type: typeof FETCH_ETHACCOUNT_REQUEST;
+    type: typeof FETCH_ETHACCOUNT_REQUEST | any;
 }
 
 export interface FetchEthaccountSuccess {
@@ -33,7 +33,7 @@ export interface FetchEthaccountSuccess {
 }
 
 export interface FetchEthaccountFailure {
-    type: typeof FETCH_ETHACCOUNT_FAILURE;
+    type: typeof FETCH_ETHACCOUNT_FAILURE | any;
     payload: FetchEthaccountFailurePayload;
 }
 
